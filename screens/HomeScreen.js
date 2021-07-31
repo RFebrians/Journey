@@ -12,6 +12,8 @@ import { SimpleLineIcons } from '@expo/vector-icons';
 import { SharedElement } from 'react-navigation-shared-element';
 
 import { data } from '../config/data';
+import { dataDetail } from '../config/dataDetail';
+
 
 const { width } = Dimensions.get('screen');
 
@@ -42,10 +44,13 @@ export default function HomeScreen({ navigation }) {
           {data.map(item => (
             <View key={item.id}>
               <TouchableOpacity
+              testID="pressMeButton"
+        accessibilityLabel="Press me"
                 activeOpacity={0.8}
                 style={{ marginBottom: 14 }}
-                onPress={() => navigation.navigate('DetailScreen', { item })}
+                onPress={() => navigation.navigate('DetailScreen', { item , dataDetail} )}
               >
+              
           
             
                 <SharedElement id={`item.${item.id}.image_url`}>

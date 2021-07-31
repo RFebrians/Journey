@@ -14,9 +14,8 @@ import * as Animatable from 'react-native-animatable';
 const { height } = Dimensions.get('window');
 const ITEM_HEIGHT = height * 0.5;
 
-const DetailScreen = ({ navigation, route }) => {
-  const { item } = route.params;
-  const { dataDetail } = route.params;
+const DetailScreen2 = ({ navigation, route }) => {
+  const { item, dataDetail } = route.params;
   const buttonRef = React.useRef();
 
   return (
@@ -90,7 +89,6 @@ const DetailScreen = ({ navigation, route }) => {
           </SharedElement>
         </View>
       </View>
-
       <ScrollView
         indicatorStyle='white'
         style={{
@@ -107,11 +105,17 @@ const DetailScreen = ({ navigation, route }) => {
             marginBottom: 4
           }}
         >
-          
-         {JSON.stringify(item.data)}
-        </Text>
-        <Text>dataDetail: {JSON.stringify(item.data)}</Text>
+         Where ever you Go , May your heart lead into a straight path .
 
+To know , that we are wandering , through times , 
+into a beautiful journey for ever wandering .
+
+What was happen , is a better for you that reach to overcome it . 
+So strong , We are never preparin for this before , but somehow ... Who knows 
+        {JSON.stringify(item)}
+        </Text>
+        <Text>dataDetail: {JSON.stringify(dataDetail)}</Text>
+        
         <Text
           style={{
             fontSize: 18,
@@ -132,7 +136,7 @@ const DetailScreen = ({ navigation, route }) => {
   );
 };
 
-DetailScreen.sharedElements = route => {
+DetailScreen2.sharedElements = route => {
   const { item, dataDetail } = route.params;
   return [
     {
@@ -158,6 +162,4 @@ DetailScreen.sharedElements = route => {
   ];
 };
 
-
-
-export default DetailScreen;
+export default DetailScreen2;

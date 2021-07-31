@@ -4,6 +4,9 @@ import { createSharedElementStackNavigator } from 'react-navigation-shared-eleme
 
 import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
+import DetailScreen2 from '../screens/DetailScreen2';
+
+
 
 const Stack = createSharedElementStackNavigator();
 
@@ -26,6 +29,11 @@ export default function RootNavigator() {
         <Stack.Screen
           name='DetailScreen'
           component={DetailScreen}
+          options={() => options}
+        />
+         <Stack.Screen
+          name='DetailScreen2'
+          component={DetailScreen2}
           options={() => options}
         />
       </Stack.Navigator>
