@@ -7,11 +7,9 @@ Built using Expo SDK  .
 
 ## To Start install all dependencies 
 
-NPM install 
+using YARN
 
-or 
-
-YARN install
+yarn install
 
 
 then expo start
