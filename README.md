@@ -19,10 +19,6 @@ then expo start
 ## to start debug unit test
 
 
-npm test Renderfield-test
-
-or
-
 yarn run Renderfield-test
 
 more on folder __tests__
